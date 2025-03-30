@@ -154,6 +154,8 @@ if __name__ == '__main__':
         logger.remove()
         logger.add(sys.stdout, level="INFO")
 
+    # logger.info(f"zotero_id:{args.zotero_id},zotero_key:{args.zotero_key},zotero_ignore:{args.zotero_ignore},arxiv_query:{args.arxiv_query},sender:{args.sender},receiver:{args.receiver},sender_pwd:{args.sender_password},smtp_server:{args.smtp_server},smtp_port:{args.smtp_port}")
+    logger.info(f"args:{args}")
     logger.info("Retrieving Zotero corpus...")
     corpus = get_zotero_corpus(args.zotero_id, args.zotero_key)
     logger.info(f"Retrieved {len(corpus)} papers from Zotero.")
